@@ -1,0 +1,286 @@
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: #1f2937;
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        min-height: 100vh;
+      }
+      
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      header {
+        background: white;
+        border-bottom: 2px solid #e2e8f0;
+        padding: 20px 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      
+      .logo img {
+        height: 40px;
+        width: auto;
+      }
+      
+      main {
+        padding: 60px 0;
+      }
+      
+      .hero {
+        text-align: center;
+        margin-bottom: 80px;
+      }
+      
+      .hero h1 {
+        font-size: 48px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #2563eb 0%, #16a34a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+      
+      .hero p {
+        font-size: 20px;
+        color: #6b7280;
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-bottom: 80px;
+      }
+      
+      .service-card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .service-card:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #2563eb 0%, #16a34a 50%, #f59e0b 100%);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+      
+      .service-card:hover:before {
+        transform: translateX(0);
+      }
+      
+      .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 35px rgba(37, 99, 235, 0.15);
+        border-color: #2563eb;
+      }
+      
+      .service-card h3 {
+        font-size: 22px;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 15px;
+        position: relative;
+      }
+      
+      .service-card:nth-child(1) h3:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: #2563eb;
+        border-radius: 2px;
+      }
+      
+      .service-card:nth-child(2) h3:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: #16a34a;
+        border-radius: 2px;
+      }
+      
+      .service-card:nth-child(3) h3:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: #f59e0b;
+        border-radius: 2px;
+      }
+      
+      .service-card p {
+        color: #6b7280;
+        line-height: 1.7;
+      }
+      
+      .about {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        padding: 50px;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        margin-bottom: 80px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .about:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #2563eb 0%, #16a34a 100%);
+      }
+      
+      .about h2 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 20px;
+      }
+      
+      .about p {
+        font-size: 18px;
+        color: #6b7280;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+      
+      .contact {
+        text-align: center;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        padding: 50px;
+        border-radius: 12px;
+        border: 1px solid #cbd5e1;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .contact:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #2563eb 0%, #16a34a 50%, #f59e0b 100%);
+      }
+      
+      .contact h2 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 20px;
+      }
+      
+      .contact p {
+        font-size: 18px;
+        color: #6b7280;
+        margin-bottom: 30px;
+      }
+      
+      .contact-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #2563eb 0%, #16a34a 100%);
+        color: white;
+        padding: 14px 32px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .contact-button:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s ease;
+      }
+      
+      .contact-button:hover:before {
+        left: 100%;
+      }
+      
+      .contact-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+      }
+      
+      footer {
+        background: white;
+        border-top: 1px solid #e5e5e5;
+        padding: 30px 0;
+        text-align: center;
+      }
+      
+      footer p {
+        color: #6b7280;
+        font-size: 14px;
+      }
+      
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 36px;
+        }
+        
+        .hero p {
+          font-size: 18px;
+        }
+        
+        .about, .contact {
+          padding: 30px 20px;
+        }
+        
+        .services {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
